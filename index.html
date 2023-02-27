@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Et si, vous aussi, vous construisiez des robots ?</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/devoxxfr.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Et si, vous aussi, vous construisiez des robots ?</h1>
+          <p style="text-align: center">
+            Stéphanie Moallic
+            <a href="http://twitter.com/steffy_29">@steffy_29</a><br />
+          </p>
+        </section>
+
+        <section
+          data-background-position="top left"
+          data-background-size="200px"
+        >
+          <img data-src="./images/presentation.png" />
+        </section>
+        <section
+          data-background-position="top left"
+          data-background-size="200px"
+        >
+          <h2>Comment ça a commencé ?</h2>
+          <div class="prez-history">
+            <div>
+              <div class="img-position">
+                <img data-src="./images/nono_ulysse_31.jpg" />
+              </div>
+              <div class="img-position">
+                <img data-src="./images/robot_vas-y_julie.jpg" />
+              </div>
+            </div>
+            <ul>
+              <li>Enfant des 80's</li>
+              <li>Issue de la pop culture</li>
+              <li>Découverte du monde des robots</li>
+              <li>Electronique difficile d'accès</li>
+            </ul>
+            <div>
+              <div class="img-position">
+                <img data-src="./images/robot_c3po_r2d2.jpg" />
+              </div>
+              <div class="img-position">
+                <img data-src="./images/robot_tirelire.jpg" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          data-background-position="top left"
+          data-background-size="200px"
+        >
+          <section>
+            <h2>Premier talk sur les robots</h2>
+            <div class="prez-history">
+              <div>
+                <div class="img-position">
+                  <img data-src="./images/Robot_Matikle.jpg" />
+                </div>
+              </div>
+              <ul>
+                <li>Riviera Dev - Mai 2017</li>
+                <li>IoT, Arduino et Ionic</li>
+                <li>Robot de la marque Elegoo</li>
+                <li>Premier montage électronique</li>
+                <li>Robot Matikle</li>
+              </ul>
+              <div>
+                <div class="img-position">
+                  <img data-src="./images/riviera_dev_photo1.jpg" />
+                </div>
+                <div class="img-position">
+                  <img data-src="./images/riviera_dev_photo2.jpg" />
+                </div>
+              </div>
+            </div>
+          </section>
+          <section data-video="my-demo"></section>
+          <section>
+            <h2>Exemple de code</h2>
+            <pre>
+              <code data-trim data-noescape>
+getstr=Serial.read();
+if(getstr == 'f') {
+  _mForward();
+} else if(getstr == 'b') {
+  _mBack();
+} else if(getstr == 'l') {
+...
+              </code>
+            </pre>
+            <pre>
+              <code data-trim data-noescape>
+void _mLeft()
+{
+  // Turn left
+  digitalWrite(ENA,HIGH);
+  digitalWrite(ENB,HIGH);
+  digitalWrite(in1,LOW);
+  digitalWrite(in2,HIGH);
+  digitalWrite(in3,LOW);
+  digitalWrite(in4,HIGH);
+  Serial.println("go left !");
+}
+              </code>
+            </pre>
+          </section>
+        </section>
+        <section
+          data-background-position="top left"
+          data-background-size="200px"
+        >
+          <section>
+            <h2>Impression 3D et robots</h2>
+            <div class="prez-history">
+              <div>
+                <div class="img-position">
+                  <img data-src="./images/my_robots.jpg" />
+                </div>
+                <div class="img-position">
+                  <img data-src="./images/microbit.jpg" />
+                </div>
+              </div>
+              <ul>
+                <li>Découverte de l'impression 3D</li>
+                <li>Apprentissage autour de la carte micro:bit</li>
+                <li>Facile à appréhender</li>
+                <li>Facilité d'enseignement pour les débutants en programmation</li>
+                <li>Beaucoup de modèles de robot à imprimer disponibles sur le site de Thingiverse</li>
+              </ul>
+              <div>
+                <div class="img-position">
+                  <img data-src="./images/microbit_logo.jpg" />
+                </div>
+                <div class="img-position">
+                  <img data-src="./images/logo_thingiverse.png" />
+                </div>
+              </div>
+            </div>
+          </section>
+          <section data-video="my-demo"></section>
+          <section>
+            <h2>Code</h2>
+            <img
+              data-src="./images/dancedancerobot-prog-1.png"
+              style="width: 700px"
+            />
+          </section>
+          <section>
+            <h2>Code</h2>
+            <img data-src="./images/dancedancerobot-prog-2.png" />
+          </section>
+        </section>
+        <section
+          data-background-position="top left"
+          data-background-size="200px"
+        >
+          <section>
+            <h2>Toujours plus de robots</h2>
+            <div class="prez-history">
+              <div>
+                <div class="img-position">
+                  <img data-src="./images/arduino_nano.jpg" />
+                </div>
+                <div class="img-position">
+                  <img data-src="./images/micropython.jpg" />
+                </div>
+              </div>
+              <ul>
+                <li>Pas mal de micro-controlleurs à tester</li>
+                <ul>
+                  <li>Arduino nano</li>
+                  <li>Raspberry pi pico</li>
+                </ul>
+                <li>D'autres languages à apprendre</li>
+                <ul>
+                  <li>Micropython / Circuit Python</li>
+                  <li>Go et Tinygo</li>
+                </ul>
+                <li>De nouveaux robots à créer</li>
+                <ul>
+                  <li>Quadrupède / Hexapode</li>
+                  <li>Volant</li>
+                </ul>
+              </ul>
+              <div>
+                <div class="img-position">
+                  <img data-src="./images/tinygo.png" />
+                </div>
+                <div class="img-position">
+                  <img data-src="./images/vorpal_robot.jpg" />
+                </div>
+              </div>
+            </div>
+          </section>
+          <section data-video="my-demo"></section>
+          <section>
+            <h2>Exemple de code Tinygo</h2>
+            <pre>
+              <code data-trim data-noescape>
+	gp1 := machine.GP1
+	pwm0b := machine.PWM0
+	pwm0b.Configure(machine.PWMConfig{
+		Period: period,
+	})
+	ch1, err1 := pwm0b.Channel(gp1)
+	if err1 != nil {
+		println(err1.Error())
+		return
+	}
+	position := 1
+  </code>
+  </pre>
+            <pre>
+  <code data-trim data-noescape>
+	for {
+		for i := 0; i < 4; i++ {
+			if position == 16 {
+				position = 1
+			}
+			pwm0b.Set(ch1, pwm0b.Top()/uint32(position))
+			time.Sleep(time.Millisecond * 10)
+			position = position + 4
+		}
+	}
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Arduino code example</h2>
+            <pre>
+              <code  data-trim data-noescape>
+void Servo_Start_Position() {
+  Hip_Centered();
+  pwm.setPWM(Head_Servo_Pin, 0, Head_Servo_Start_Position);
+  Legs_Folded();
+  pwm.setPWM(Door_Servo_Pin, 0, Door_Servo_Close);
+  delay(1000);
+}
+              </code>
+            </pre>
+            <pre>
+              <code  data-trim data-noescape>
+    case Legs_Deployment:
+      Door(Opening);
+      Legs_Partially_Unfolded(); // DEPLOY THE LEGS UP TO TOUCH THE GROUND
+      Legs_Unfolded(); // DEPLOY THE LEGS TO LIFT THE ROBOT
+    case Moving_Forward:
+      Led_Walking();
+      while (Ultrasonic_Sensor() > Distance_To_Activate_Switch) { // CONTINUE TO WALK UNTIL SWITCH ACTIVATION
+        if (Ultrasonic_Sensor() > Distance_Obstacle) walk();
+        else if (Head_Rotation() == Left) Rotation(Left);
+        else Rotation(Right);
+      }
+              </code>
+            </pre>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Si vous construisiez votre premier robot ?</h2>
+            <ul>
+              <li>Matériel nécessaire :</li>
+              <ul>
+                <li>Carte micro:bit</li>
+                <li>Carton, colle chaude, feutres</li>
+                <li>Servo-moteur 180°</li>
+                <li>3 fils avec pince-crocodile</li>
+              </ul>
+            </ul>
+          </section>
+          <section>
+            <h2>Code</h2>
+          </section>
+          <section data-video="my-demo">
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Votre premier robot roulant</h2>
+            <ul>
+              <li>Matériel nécessaire :</li>
+              <ul>
+                <li>Carte micro:bit</li>
+                <li>Cart ring:bit</li>
+                <li>Carton, colle chaude</li>
+                <li>2 servo-moteurs 360°</li>
+                <li>Capteur de distance à ultra-son</li>
+              </ul>
+            </ul>
+          </section>
+          <section>
+            <h2>Code</h2>
+          </section>
+          <section data-video="my-demo">
+          </section>
+        </section>
+        <section
+          data-background-position="top left"
+          data-background-size="200px"
+        >
+          <h2>Ressources</h2>
+          <ul>
+            <li>
+              Les modèles 3D sont disponibles sur
+              <a href="https://www.thingiverse.com/">Thingiverse.com</a>
+            </li>
+            <li>Les codes sources sont disponibles sur Github Steffy29</li>
+            <ul>
+              <li>
+                <img
+                  data-src="./images/logo_github.png"
+                  class="image-cropper logos-rs"
+                />
+                <a href="https://github.com/Steffy29/matikle"
+                  >Robot Matikle Robot et sa commande</a
+                >
+                basé sur le kit Elegoo Robot Car
+              </li>
+              <li>
+                <img
+                  data-src="./images/logo_github.png"
+                  class="image-cropper logos-rs"
+                />
+                <a href="https://github.com/Steffy29/dancedancerobot"
+                  >DanceDanceRobot</a
+                >
+                et
+                <a href="https://github.com/Steffy29/dancedancerobot-command"
+                  >Commande DanceDanceRobot</a
+                >
+                basé sur Kitten Bot Otto
+              </li>
+              <li>
+                <img
+                  data-src="./images/logo_github.png"
+                  class="image-cropper logos-rs"
+                />
+                <a href="https://github.com/Steffy29/pico_quadruped"
+                  >PicoQuad</a
+                >
+                basé sur Q1 Mini Quadruped
+              </li>
+              <li>
+                <img
+                  data-src="./images/logo_github.png"
+                  class="image-cropper logos-rs"
+                />
+                <a href="https://github.com/Steffy29/vorpal"
+                  >Vorpal</a
+                >
+                basé sur Vorpal
+              </li>
+            </ul>
+          </ul>
+        </section>
+        <section
+          data-background-position="top left"
+          data-background-size="200px"
+        >
+          <h1>Merci !</h1>
+          <img data-src="./images/poney_thanks.gif" />
+        </section>
+        <section
+          data-background-image="./images/verytechtrip_logo.png"
+          data-background-position="top left"
+          data-background-size="200px"
+        >
+          <h1>Des questions ?</h1>
+          <img data-src="./images/any_questions.gif" />
+        </section>
+        <section>
+          <h2>Avec quel matériel démarrer ?</h2>
+          <div class="prez-history">
+            <div>
+              <div class="img-position">
+                <img data-src="./images/mbot.jpg" style="height: 236px"/>
+              </div>
+              <div class="img-position">
+                <img data-src="./images/keyestudio_robot_tank.jpg" style="height: 236px" />
+              </div>
+            </div>
+            <ul>
+              <li>Makeblock mBot</li>
+              <li>Keyestudio microbit robot car kit</li>
+              <br/>
+              <br/>
+              <li>Keyestudio robot tank</li>
+              <li>Elegoo Penguin bot robot kit</li>
+            </ul>
+            <div>
+              <div class="img-position">
+                <img data-src="./images/keyestudio_microbit.jpg" style="height: 236px" />
+              </div>
+              <div class="img-position">
+                <img data-src="./images/elegoo_penguin_biped.jpg" style="height: 236px" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+
+        dependencies: [
+          {
+            src: "./bower_components/reveal-embed-video/reveal-embed-video.js",
+          },
+        ],
+
+        "embed-video": {
+          enabled: true, // optional, default false
+          // persistent: false, // optional, default false
+        },
+      });
+    </script>
+  </body>
+</html>
