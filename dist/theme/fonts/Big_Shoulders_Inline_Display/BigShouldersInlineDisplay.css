@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Big Shoulders Inline Display';
+    src: url('./BigShouldersInlineDisplay-VariableFont_wght.ttf');
+    src: url('./BigShouldersInlineDisplay-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
