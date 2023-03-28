@@ -20,6 +20,29 @@ section.has-light-background, section.has-light-background h1, section.has-light
   color: #222;
 }
 
+.title-page {
+  background-color: #000e11;
+}
+
+.parallelogramme {
+  width  : 100px;
+  height : 0;
+  border-top  : 50px solid green;
+  border-left : 20px solid transparent;
+  position : relative;
+}
+#parallelogramme:after {
+  width  : 0;
+  height : 0;
+  content: '';
+  border-bottom : 50px solid green;
+  border-right  : 20px solid transparent;
+  border-left   : 20px solid transparent;
+  position : absolute;
+  top  : -50px;
+  right: -20px;
+}
+
 .image-cropper {
   overflow: hidden;
   width: 50px;
@@ -86,14 +109,14 @@ section.has-light-background, section.has-light-background h1, section.has-light
  * GLOBAL STYLES
  *********************************************/
 :root {
-  --r-background-color: #002b36;
+  --r-background-color: #000e11;
   --r-main-font: Big Shoulders Inline Display, sans-serif;
   --r-main-font-size: 40px;
-  --r-main-color: #93a1a1;
+  --r-main-color: #E9E2DB;
   --r-block-margin: 20px;
   --r-heading-margin: 0 0 20px 0;
   --r-heading-font: Berkshire Swash, sans-serif;
-  --r-heading-color: #eee8d5;
+  --r-heading-color: #6D7AFF;
   --r-heading-line-height: 1.2;
   --r-heading-letter-spacing: normal;
   /* --r-heading-text-transform: uppercase; */
