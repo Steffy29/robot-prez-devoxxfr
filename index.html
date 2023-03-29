@@ -19,15 +19,19 @@
   <body>
     <div class="reveal">
       <div class="slides">
-        <section class="title-page">
-          <div class="parallelogramme"></div>
+        <section class="title-page column-break">
+          <div class="img-position">
+            <img data-src="./images/image10.png" />
+          </div>
           <div>
-          <h1>Et si, vous aussi, vous construisiez des robots ?</h1>
-          <p style="text-align: center">
-            Stéphanie Moallic
-            <a href="http://twitter.com/steffy_29">@steffy_29</a><br />
-          </p>
-        </div>
+            <img data-src="./images/logo-texte-devoxx-france-400.png" />
+            <h3>Et si, vous aussi, vous construisiez des robots ?</h3>
+            <p style="text-align: center">
+              Stéphanie Moallic
+              <a href="http://twitter.com/steffy_29">@steffy_29</a><br />
+            </p>
+            <img data-src="./images/robot8.png" style="height: 200px;" class="image-title" />
+          </div>
         </section>
 
         <section
@@ -52,12 +56,17 @@
                 <img data-src="./images/robot_vas-y_julie.jpg" />
               </div>
             </div>
-            <ul>
-              <li>Enfant des 80's</li>
-              <li>Issue de la pop culture</li>
-              <li>Découverte du monde des robots</li>
-              <li>Electronique difficile d'accès</li>
-            </ul>
+            <div>
+              <ul>
+                <li>Enfant des 80's</li>
+                <li>Issue de la pop culture</li>
+                <li>Découverte du monde des robots</li>
+                <li>Electronique difficile d'accès</li>
+              </ul>
+              <div>
+                <img data-src="./images/robot5.png" style="width: 200px" />
+              </div>
+            </div>
             <div>
               <div class="img-position">
                 <img data-src="./images/robot_c3po_r2d2.jpg" />
@@ -81,13 +90,18 @@
                   <img data-src="./images/Robot_Matikle.jpg" />
                 </div>
               </div>
-              <ul>
-                <li>Riviera Dev - Mai 2017</li>
-                <li>IoT, Arduino et Ionic</li>
-                <li>Robot de la marque Elegoo</li>
-                <li>Premier montage électronique</li>
-                <li>Robot Matikle</li>
-              </ul>
+              <div>
+                <ul>
+                  <li>Riviera Dev - Mai 2017</li>
+                  <li>IoT, Arduino et Ionic</li>
+                  <li>Robot de la marque Elegoo</li>
+                  <li>Premier montage électronique</li>
+                  <li>Robot Matikle</li>
+                </ul>
+                <div>
+                  <img data-src="./images/robot6.png" style="width: 200px" />
+                </div>
+              </div>
               <div>
                 <div class="img-position">
                   <img data-src="./images/riviera_dev_photo1.jpg" />
@@ -145,13 +159,23 @@ void _mLeft()
                   <img data-src="./images/microbit.jpg" />
                 </div>
               </div>
-              <ul>
-                <li>Découverte de l'impression 3D</li>
-                <li>Apprentissage autour de la carte micro:bit</li>
-                <li>Facile à appréhender</li>
-                <li>Facilité d'enseignement pour les débutants en programmation</li>
-                <li>Beaucoup de modèles de robot à imprimer disponibles sur le site de Thingiverse</li>
-              </ul>
+              <div>
+                <ul>
+                  <li>Découverte de l'impression 3D</li>
+                  <li>Apprentissage autour de la carte micro:bit</li>
+                  <li>Facile à appréhender</li>
+                  <li>
+                    Facilité d'enseignement pour les débutants en programmation
+                  </li>
+                  <li>
+                    Beaucoup de modèles de robot à imprimer disponibles sur le
+                    site de Thingiverse
+                  </li>
+                </ul>
+                <div>
+                  <img data-src="./images/robot7.png" style="width: 150px" />
+                </div>
+              </div>
               <div>
                 <div class="img-position">
                   <img data-src="./images/microbit_logo.jpg" />
@@ -191,23 +215,28 @@ void _mLeft()
                   <img data-src="./images/micropython.jpg" />
                 </div>
               </div>
-              <ul>
-                <li>Pas mal de micro-controlleurs à tester</li>
+              <div>
                 <ul>
-                  <li>Arduino nano</li>
-                  <li>Raspberry pi pico</li>
+                  <li>Pas mal de micro-controlleurs à tester</li>
+                  <ul>
+                    <li>Arduino nano</li>
+                    <li>Raspberry pi pico</li>
+                  </ul>
+                  <li>D'autres languages à apprendre</li>
+                  <ul>
+                    <li>Micropython / Circuit Python</li>
+                    <li>Go et Tinygo</li>
+                  </ul>
+                  <li>De nouveaux robots à créer</li>
+                  <ul>
+                    <li>Quadrupède / Hexapode</li>
+                    <li>Volant</li>
+                  </ul>
                 </ul>
-                <li>D'autres languages à apprendre</li>
-                <ul>
-                  <li>Micropython / Circuit Python</li>
-                  <li>Go et Tinygo</li>
-                </ul>
-                <li>De nouveaux robots à créer</li>
-                <ul>
-                  <li>Quadrupède / Hexapode</li>
-                  <li>Volant</li>
-                </ul>
-              </ul>
+                <div>
+                  <img data-src="./images/robot8.png" style="width: 150px" />
+                </div>
+              </div>
               <div>
                 <div class="img-position">
                   <img data-src="./images/tinygo.png" />
@@ -288,21 +317,34 @@ void Servo_Start_Position() {
         >
           <section>
             <h2>Si vous construisiez votre premier robot ?</h2>
-            <ul>
-              <li>Matériel nécessaire :</li>
-              <ul>
-                <li>Carte micro:bit</li>
-                <li>Carton, colle chaude, feutres</li>
-                <li>Servo-moteur 180°</li>
-                <li>3 fils avec pince-crocodile</li>
-              </ul>
-            </ul>
+            <div class="prez-history">
+              <div>
+                <div class="img-position">
+                  <img data-src="./images/robot5.png" />
+                </div>
+              </div>
+              <div>
+                <ul>
+                  <li>Matériel nécessaire :</li>
+                  <ul>
+                    <li>Carte micro:bit</li>
+                    <li>Carton, colle chaude, feutres</li>
+                    <li>Servo-moteur 180°</li>
+                    <li>3 fils avec pince-crocodile</li>
+                  </ul>
+                </ul>
+              </div>
+              <div>
+                <div class="img-position">
+                  <img data-src="./images/robot6.png" />
+                </div>
+              </div>
+            </div>
           </section>
           <section>
             <h2>Code</h2>
           </section>
-          <section data-video="my-demo">
-          </section>
+          <section data-video="my-demo"></section>
         </section>
         <section
           data-background-image="./images/logo-texte-devoxx-france-400.png"
@@ -310,22 +352,35 @@ void Servo_Start_Position() {
           data-background-size="200px"
         >
           <section>
-          <h2>Votre premier robot qui marche</h2>
-            <ul>
-              <li>Matériel nécessaire :</li>
-              <ul>
-                <li>Carte micro:bit</li>
-                <li>Carte robot:bit</li>
-                <li>Carton, colle chaude</li>
-                <li>4 servo-moteurs 180°</li>
-              </ul>
-            </ul>
+            <h2>Votre premier robot qui roule</h2>
+            <div class="prez-history">
+              <div>
+                <div class="img-position">
+                  <img data-src="./images/robot7.png" />
+                </div>
+              </div>
+              <div>
+                <ul>
+                  <li>Matériel nécessaire :</li>
+                  <ul>
+                    <li>Carte micro:bit</li>
+                    <li>Carte robot:bit</li>
+                    <li>Carton, colle chaude</li>
+                    <li>2 moteurs</li>
+                  </ul>
+                </ul>
+              </div>
+              <div>
+                <div class="img-position">
+                  <img data-src="./images/robot_devoxx_7.png" />
+                </div>
+              </div>
+            </div>
           </section>
           <section>
             <h2>Code</h2>
           </section>
-          <section data-video="my-demo">
-          </section>
+          <section data-video="my-demo"></section>
         </section>
         <section
           data-background-image="./images/logo-texte-devoxx-france-400.png"
@@ -333,49 +388,64 @@ void Servo_Start_Position() {
           data-background-size="200px"
         >
           <h2>Ressources</h2>
-          <ul>
-            <li>
-              Les modèles 3D sont disponibles sur
-              <a href="https://www.thingiverse.com/">Thingiverse.com</a>
-            </li>
-            <li>Les codes sources sont disponibles sur Github @Steffy29</li>
-            <ul>
-              <li>
-                <img
-                  data-src="./images/logo_github.png"
-                  class="image-cropper logos-rs"
-                />
-                <a href="https://github.com/Steffy29/matikle"
-                  >Robot Matikle Robot et sa commande</a
-                >
-                basé sur le kit Elegoo Robot Car
-              </li>
-              <li>
-                <img
-                  data-src="./images/logo_github.png"
-                  class="image-cropper logos-rs"
-                />
-                <a href="https://github.com/Steffy29/dancedancerobot"
-                  >DanceDanceRobot</a
-                >
-                et
-                <a href="https://github.com/Steffy29/dancedancerobot-command"
-                  >Commande DanceDanceRobot</a
-                >
-                basé sur Kitten Bot Otto
-              </li>
-              <li>
-                <img
-                  data-src="./images/logo_github.png"
-                  class="image-cropper logos-rs"
-                />
-                <a href="https://github.com/Steffy29/pico_quadruped"
-                  >PicoQuad</a
-                >
-                basé sur Q1 Mini Quadruped
-              </li>
-            </ul>
-          </ul>
+          <div class="prez-history">
+            <div>
+              <div class="img-position">
+                <img data-src="./images/robot_devoxx_6.png" />
+              </div>
+            </div>
+            <div>
+              <ul>
+                <li>
+                  Les modèles 3D sont disponibles sur
+                  <a href="https://www.thingiverse.com/">Thingiverse.com</a>
+                </li>
+                <li>Les codes sources sont disponibles sur Github @Steffy29</li>
+                <ul>
+                  <li>
+                    <img
+                      data-src="./images/logo_github.png"
+                      class="image-cropper logos-rs"
+                    />
+                    <a href="https://github.com/Steffy29/matikle"
+                      >Robot Matikle Robot et sa commande</a
+                    >
+                    basé sur le kit Elegoo Robot Car
+                  </li>
+                  <li>
+                    <img
+                      data-src="./images/logo_github.png"
+                      class="image-cropper logos-rs"
+                    />
+                    <a href="https://github.com/Steffy29/dancedancerobot"
+                      >DanceDanceRobot</a
+                    >
+                    et
+                    <a
+                      href="https://github.com/Steffy29/dancedancerobot-command"
+                      >Commande DanceDanceRobot</a
+                    >
+                    basé sur Kitten Bot Otto
+                  </li>
+                  <li>
+                    <img
+                      data-src="./images/logo_github.png"
+                      class="image-cropper logos-rs"
+                    />
+                    <a href="https://github.com/Steffy29/pico_quadruped"
+                      >PicoQuad</a
+                    >
+                    basé sur Q1 Mini Quadruped
+                  </li>
+                </ul>
+              </ul>
+            </div>
+            <div>
+              <div class="img-position">
+                <img data-src="./images/speaker_1.png" />
+              </div>
+            </div>
+          </div>
         </section>
         <section
           data-background-image="./images/logo-texte-devoxx-france-400.png"
@@ -383,7 +453,7 @@ void Servo_Start_Position() {
           data-background-size="200px"
         >
           <h1>Merci !</h1>
-          <img data-src="./images/poney_thanks.gif" />
+          <img data-src="./images/image10.png" />
         </section>
         <section
           data-background-image="./images/logo-texte-devoxx-france-400.png"
@@ -391,7 +461,7 @@ void Servo_Start_Position() {
           data-background-size="200px"
         >
           <h1>Des questions ?</h1>
-          <img data-src="./images/any_questions.gif" />
+          <img data-src="./images/image9.png" style="height: 400px;" />
         </section>
         <section
           data-background-image="./images/logo-texte-devoxx-france-400.png"
@@ -402,29 +472,74 @@ void Servo_Start_Position() {
           <div class="prez-history">
             <div>
               <div class="img-position">
-                <img data-src="./images/mbot.jpg" style="height: 236px"/>
+                <img data-src="./images/mbot.jpg" style="height: 236px" />
               </div>
               <div class="img-position">
-                <img data-src="./images/keyestudio_robot_tank.jpg" style="height: 236px" />
+                <img
+                  data-src="./images/keyestudio_robot_tank.jpg"
+                  style="height: 236px"
+                />
               </div>
             </div>
             <ul>
               <li>Makeblock mBot</li>
               <li>Keyestudio microbit robot car kit</li>
-              <br/>
-              <br/>
+              <br />
+              <br />
               <li>Keyestudio robot tank</li>
               <li>Elegoo Penguin bot robot kit</li>
             </ul>
             <div>
               <div class="img-position">
-                <img data-src="./images/keyestudio_microbit.jpg" style="height: 236px" />
+                <img
+                  data-src="./images/keyestudio_microbit.jpg"
+                  style="height: 236px"
+                />
               </div>
               <div class="img-position">
-                <img data-src="./images/elegoo_penguin_biped.jpg" style="height: 236px" />
+                <img
+                  data-src="./images/elegoo_penguin_biped.jpg"
+                  style="height: 236px"
+                />
               </div>
             </div>
           </div>
+        </section>
+        <section
+          data-background-image="./images/logo-texte-devoxx-france-400.png"
+          data-background-position="top left"
+          data-background-size="200px"
+        >
+          <section>
+            <h2>Votre premier robot qui marche</h2>
+            <div class="prez-history">
+              <div>
+                <div class="img-position">
+                  <img data-src="./images/robot7.png" />
+                </div>
+              </div>
+              <div>
+                <ul>
+                  <li>Matériel nécessaire :</li>
+                  <ul>
+                    <li>Carte micro:bit</li>
+                    <li>Carte robot:bit</li>
+                    <li>Carton, colle chaude</li>
+                    <li>4 servo-moteurs 180°</li>
+                  </ul>
+                </ul>
+              </div>
+              <div>
+                <div class="img-position">
+                  <img data-src="./images/robot_devoxx_6.png" />
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Code</h2>
+          </section>
+          <section data-video="my-demo"></section>
         </section>
       </div>
     </div>

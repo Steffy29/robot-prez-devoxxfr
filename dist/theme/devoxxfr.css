@@ -24,25 +24,6 @@ section.has-light-background, section.has-light-background h1, section.has-light
   background-color: #000e11;
 }
 
-.parallelogramme {
-  width  : 100px;
-  height : 0;
-  border-top  : 50px solid green;
-  border-left : 20px solid transparent;
-  position : relative;
-}
-#parallelogramme:after {
-  width  : 0;
-  height : 0;
-  content: '';
-  border-bottom : 50px solid green;
-  border-right  : 20px solid transparent;
-  border-left   : 20px solid transparent;
-  position : absolute;
-  top  : -50px;
-  right: -20px;
-}
-
 .image-cropper {
   overflow: hidden;
   width: 50px;
@@ -50,6 +31,12 @@ section.has-light-background, section.has-light-background h1, section.has-light
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
+}
+
+.image-title {
+  margin: auto !important;
+  padding-left: 30%;
+
 }
 
 .profil-image {
