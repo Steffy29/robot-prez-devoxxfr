@@ -280,35 +280,6 @@ void _mLeft()
               </code>
             </pre>
           </section>
-          <section>
-            <h2>Arduino code example</h2>
-            <pre>
-              <code  data-trim data-noescape>
-void Servo_Start_Position() {
-  Hip_Centered();
-  pwm.setPWM(Head_Servo_Pin, 0, Head_Servo_Start_Position);
-  Legs_Folded();
-  pwm.setPWM(Door_Servo_Pin, 0, Door_Servo_Close);
-  delay(1000);
-}
-              </code>
-            </pre>
-            <pre>
-              <code  data-trim data-noescape>
-    case Legs_Deployment:
-      Door(Opening);
-      Legs_Partially_Unfolded(); // DEPLOY THE LEGS UP TO TOUCH THE GROUND
-      Legs_Unfolded(); // DEPLOY THE LEGS TO LIFT THE ROBOT
-    case Moving_Forward:
-      Led_Walking();
-      while (Ultrasonic_Sensor() > Distance_To_Activate_Switch) { // CONTINUE TO WALK UNTIL SWITCH ACTIVATION
-        if (Ultrasonic_Sensor() > Distance_Obstacle) walk();
-        else if (Head_Rotation() == Left) Rotation(Left);
-        else Rotation(Right);
-      }
-              </code>
-            </pre>
-          </section>
         </section>
         <section
           data-background-image="./images/logo-texte-devoxx-france-400.png"
