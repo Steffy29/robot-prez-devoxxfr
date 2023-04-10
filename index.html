@@ -117,28 +117,29 @@
             <h2>Exemple de code</h2>
             <pre>
               <code data-trim data-noescape>
-getstr=Serial.read();
-if(getstr == 'f') {
-  _mForward();
-} else if(getstr == 'b') {
-  _mBack();
-} else if(getstr == 'l') {
+dataString = Serial.readStringUntil('\n');
+sscanf(dataString.c_str(), "%d,%d,%d,%d", 
+  &data.lxAxisValue, &data.lyAxisValue, &data.rxAxisValue, &data.ryAxisValue);
+// Left stick, y axis, forward/backward car movement
+int throttle = map(data.lyAxisValue, 254, 0, -255, 255);
+// Right stick, x axis, left/right car movement
+int steering = map(data.rxAxisValue, 0, 254, -255, 255);
+int motorDirection = 1;
+
+if (throttle < 0) { // Move car backward
+  motorDirection = -1;
+}
 ...
               </code>
             </pre>
             <pre>
               <code data-trim data-noescape>
-void _mLeft()
-{
-  // Turn left
-  digitalWrite(ENA,HIGH);
-  digitalWrite(ENB,HIGH);
-  digitalWrite(in1,LOW);
-  digitalWrite(in2,HIGH);
-  digitalWrite(in3,LOW);
-  digitalWrite(in4,HIGH);
-  Serial.println("go left !");
-}
+                void rotateMotor(int rightMotorSpeed, int leftMotorSpeed) {
+                  if (rightMotorSpeed < 0) {
+                    digitalWrite(rightMotorPin1, LOW);
+                    digitalWrite(rightMotorPin2, HIGH);
+                  } else if (rightMotorSpeed > 0) {
+                ...
               </code>
             </pre>
           </section>
@@ -299,7 +300,7 @@ void _mLeft()
                   <li>Matériel nécessaire :</li>
                   <ul>
                     <li>Carte micro:bit</li>
-                    <li>Carton, colle chaude, feutres, peinture</li>
+                    <li>Carton, colle chaude, feutres, peinture, papier alu, baton de glace</li>
                     <li>Servo-moteur 180°</li>
                     <li>5 fils avec pince-crocodile</li>
                     <li>Alimentation 4 piles 6V</li>
@@ -335,9 +336,9 @@ void _mLeft()
                 <ul>
                   <li>Matériel nécessaire :</li>
                   <ul>
-                    <li>Carte micro:bit</li>
+                    <li>2 Cartes micro:bit</li>
                     <li>Carte robot:bit</li>
-                    <li>Carton, colle chaude, feutres, peinture</li>
+                    <li>Carton, colle chaude, feutres, peinture, brochette en bois</li>
                     <li>2 moteurs</li>
                     <li>Alimentation pile 9V</li>
                   </ul>
